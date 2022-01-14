@@ -142,13 +142,11 @@ gsutil -m rsync -r gs://seouldatepop/shop s3://cdn.datepop.co.kr/image/shop
 
 
 
-*참고문서
-Google rsync 에 관하여 : [https://cloud.google.com/storage/docs/gsutil/commands/rsync](https://cloud.google.com/storage/docs/gsutil/commands/rsync)
-
-스크립트를 작성해서 할생각이라면 : [https://googleapis.dev/python/storage/latest/client.html](https://googleapis.dev/python/storage/latest/client.html)
-
-아마존 S3 : [https://docs.aws.amazon.com/ko_kr/AmazonS3/latest/userguide/Welcome.html](https://docs.aws.amazon.com/ko_kr/AmazonS3/latest/userguide/Welcome.html)
-
-S3 버킷이 가상호스팅경로인경우 읽어볼 글 : [https://aws.amazon.com/ko/blogs/aws/amazon-s3-path-deprecation-plan-the-rest-of-the-story/](https://aws.amazon.com/ko/blogs/aws/amazon-s3-path-deprecation-plan-the-rest-of-the-story/)
-
+*참고문서  
+Google rsync 에 관하여 : [https://cloud.google.com/storage/docs/gsutil/commands/rsync](https://cloud.google.com/storage/docs/gsutil/commands/rsync)  
+스크립트를 작성해서 할생각이라면 : [https://googleapis.dev/python/storage/latest/client.html](https://googleapis.dev/python/storage/latest/client.html)  
+아마존 S3 : [https://docs.aws.amazon.com/ko_kr/AmazonS3/latest/userguide/Welcome.html](https://docs.aws.amazon.com/ko_kr/AmazonS3/latest/userguide/Welcome.html)  
+S3 버킷이 가상호스팅경로인경우 읽어볼 글 : [https://aws.amazon.com/ko/blogs/aws/amazon-s3-path-deprecation-plan-the-rest-of-the-story/](https://aws.amazon.com/ko/blogs/aws/amazon-s3-path-deprecation-plan-the-rest-of-the-story/)  
 구글컴퓨팅엔진을 이용하고자한다면: [https://cloud.google.com/compute/](https://cloud.google.com/compute/)
+
+
