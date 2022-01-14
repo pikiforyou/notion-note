@@ -2,6 +2,8 @@
 
 ## INTRO, 
 
+
+
 GCF 대신 직접 google cloud sdk CLI를 이용해 작업했다.  
 작업의 시작은 GCP의 스토리지를, AWS 버킷으로 이전하는 내용이었다. 현 회사의 구조는 GCP/AWS를 둘다 사용하고 있는데 기존 GCP에 묶여 있는 각 구별로 되어있는 상점이미지, 리뷰이미지등을 S3버킷으로 옮기기로 했다. 이 과정에서 API구현을 통해 커버하자고 해서 처음에는 GCF(Google Cloud Function, lamda와 비슷하다)를 작성해두었었다. 그러나 용량, 내용을 점검한 결과 결국은 CLI을 통해 직접적으로 파일을 옮기기로 결정이 되었다.  
   
@@ -29,7 +31,7 @@ aws --version
 which aws
 ```
 
-1. **AWS CLI를 위한 AWS Configure 설정**
+2. **AWS CLI를 위한 AWS Configure 설정**
 
 ```python
 aws configure
@@ -40,7 +42,7 @@ aws configure
 Default output format ? -> json형식으로 하고싶다면 json, 그냥 엔터로 넘겨도됨
 ```
 
-1. **Google CLI에서 AWS인증정보를 참고하기 위한 자격증명 파일 설정** 
+3. **Google CLI에서 AWS인증정보를 참고하기 위한 자격증명 파일 설정** 
     
     (참고 : [https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/cli-configure-files.html](https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/cli-configure-files.html))
     
@@ -71,7 +73,7 @@ calling_format = boto.s3.connection.OrdinaryCallingFormat
     
 
 
-1. **Google내 설정** 
+4. **Google내 설정** 
 
 ```python
 gsutil version -l  or  gsutil ver -l
@@ -96,7 +98,7 @@ complied crcmod : True
     ```
     
 
-1. **.boto 파일 설정**
+5. **.boto 파일 설정**
 
 ```python
 vi ~/.boto
@@ -138,9 +140,15 @@ gsutil -m rsync -r gs://seouldatepop/shop s3://cdn.datepop.co.kr/image/shop
    
 ---
 
+
+
 *참고문서
 Google rsync 에 관하여 : [https://cloud.google.com/storage/docs/gsutil/commands/rsync](https://cloud.google.com/storage/docs/gsutil/commands/rsync)
+
 스크립트를 작성해서 할생각이라면 : [https://googleapis.dev/python/storage/latest/client.html](https://googleapis.dev/python/storage/latest/client.html)
+
 아마존 S3 : [https://docs.aws.amazon.com/ko_kr/AmazonS3/latest/userguide/Welcome.html](https://docs.aws.amazon.com/ko_kr/AmazonS3/latest/userguide/Welcome.html)
+
 S3 버킷이 가상호스팅경로인경우 읽어볼 글 : [https://aws.amazon.com/ko/blogs/aws/amazon-s3-path-deprecation-plan-the-rest-of-the-story/](https://aws.amazon.com/ko/blogs/aws/amazon-s3-path-deprecation-plan-the-rest-of-the-story/)
+
 구글컴퓨팅엔진을 이용하고자한다면: [https://cloud.google.com/compute/](https://cloud.google.com/compute/)
