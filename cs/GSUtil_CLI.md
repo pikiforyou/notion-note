@@ -7,6 +7,8 @@ GCF 대신 직접 google cloud sdk CLI를 이용해 작업했다.
   
 다만 팀장님은 직접적으로 로컬을 이용하여 [ 1)구글에서 파일을 로컬에 받는다. 2)AWS S3에 파일을 올린다 ]라는 방식을 취하셨는데, 이 다운받고 올리는 과정이 오래 걸리기도 하고 비효율적이라고 느꼈다(용량도 얼마없는데...!)  
 그래서 조금 찾아봤더니 AWS->GS(Google Storage)로 바로 전송시키는 방법이 있었다. 그렇다면 반대도 될거라고 생각해서 진행한 내역들의 기록이다.    
+
+
 ⚡️ 결국 이 글은 (중요)  
 로컬에 다운받고 올리는 방법이 아닌, google credential과 amazone s3 credential을 설정한 후, gsutil을 이용하여 google storage(gs)에서 직접적으로 s3(s3)로 mtime정보를 이용해 싱크를 맞춰주는 작업이다. 반대로 S3에서 s3 CLI를 통해 google storage와 싱크를 맞춰줘도 상관없다.
 
