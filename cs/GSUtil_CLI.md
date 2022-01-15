@@ -1,9 +1,9 @@
 # GSUtil CLI를 이용한 rsync 작업하기
 
-## INTRO, 
 
-
-
+**INTRO,**
+  
+  
 GCF 대신 직접 google cloud sdk CLI를 이용해 작업했다.  
 작업의 시작은 GCP의 스토리지를, AWS 버킷으로 이전하는 내용이었다. 현 회사의 구조는 GCP/AWS를 둘다 사용하고 있는데 기존 GCP에 묶여 있는 각 구별로 되어있는 상점이미지, 리뷰이미지등을 S3버킷으로 옮기기로 했다. 이 과정에서 API구현을 통해 커버하자고 해서 처음에는 GCF(Google Cloud Function, lamda와 비슷하다)를 작성해두었었다. 그러나 용량, 내용을 점검한 결과 결국은 CLI을 통해 직접적으로 파일을 옮기기로 결정이 되었다.  
   
@@ -44,9 +44,9 @@ Default output format ? -> json형식으로 하고싶다면 json, 그냥 엔터�
 <br><br><br>
 3. **Google CLI에서 AWS인증정보를 참고하기 위한 자격증명 파일 설정** 
     
-    (참고 : [https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/cli-configure-files.html](https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/cli-configure-files.html))
-    
-    *여러번 시도하면서 개인적으로 설정한 내역이라, rsync호출시 certificate error가 뜨지않는다면 aws_access_key_id / aws_secret_access_key 부분만 설정해줘도됨.
+참고 : [https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/cli-configure-files.html](https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/cli-configure-files.html)
+*여러번 시도하면서 개인적으로 설정한 내역이라,  
+rsync호출시 certificate error가 뜨지않는다면 aws_access_key_id / aws_secret_access_key 부분만 설정해줘도됨.
     
 
 ```python
