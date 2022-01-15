@@ -30,7 +30,7 @@ or pip3 install awscli --upgrade --user
 aws --version
 which aws
 ```
-
+<br><br><br>
 2. **AWS CLI를 위한 AWS Configure 설정**
 
 ```python
@@ -41,7 +41,7 @@ aws configure
 ✨Default region name ? -> ap-northeast-2 입력(리전이 틀리다면 리전명)
 Default output format ? -> json형식으로 하고싶다면 json, 그냥 엔터로 넘겨도됨
 ```
-
+<br><br><br>
 3. **Google CLI에서 AWS인증정보를 참고하기 위한 자격증명 파일 설정** 
     
     (참고 : [https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/cli-configure-files.html](https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/cli-configure-files.html))
@@ -72,7 +72,7 @@ calling_format = boto.s3.connection.OrdinaryCallingFormat
 - [s3] calling_format의 경우는 기존 경로스타일 버킷으로 불러주기위한 설정이다
     
 
-
+<br><br><br>
 4. **Google내 설정** 
 
 ```python
@@ -97,7 +97,7 @@ complied crcmod : True
     pip3 install -U crcmod
     ```
     
-
+<br><br><br>
 5. **.boto 파일 설정**
 
 ```python
@@ -133,14 +133,14 @@ parallel_composite_upload_component_size = 2M
 ```python
 gsutil -m rsync -r gs://seouldatepop/shop s3://cdn.datepop.co.kr/image/shop
 ```
+<br><br><br>
 
 변수사항도 많고, 제대로 정리된 문서가 없어 설정 하면서 진짜 너무 힘들었으므로.. 혹시나 또 할 사람이 있을까봐 남겨 놓긴 합니다만...   
 언제나 그렇듯 최신의 상황을 꼭 찾아보시고 해주세요.  
 2021.11.25
    
 ---
-
-
+<br><br><br>
 
 *참고문서  
 Google rsync 에 관하여 : [https://cloud.google.com/storage/docs/gsutil/commands/rsync](https://cloud.google.com/storage/docs/gsutil/commands/rsync)  
