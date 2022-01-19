@@ -1,6 +1,7 @@
 # Atomic Design ?
 
-![Atomic%20Design%20bd2738a136e2486dbf4b5be40dc55a9f/Untitled.png](Atomic%20Design%20bd2738a136e2486dbf4b5be40dc55a9f/Untitled.png)
+![https://media.vlpt.us/images/seob/post/67838f3b-18c7-4372-93a0-da3bf08888e2/atomic-design-process.png](https://media.vlpt.us/images/seob/post/67838f3b-18c7-4372-93a0-da3bf08888e2/atomic-design-process.png)
+
 
 뷰를 Atoms(원자) -> Molecules(분자) -> Organisms(유기체) -> Templates -> Pages 순으로 작은 것들을 만들고, 결합해 좀 더 큰 단위의 뷰를 만들어 나가는 디자인 시스템입니다.웹앱은 여러 페이지 단위로 이루어지고 페이지는 input, button, form 등의 태그들로 이루어져있습니다. 이를 원자, 분자, 유기체같은 생물학적인 개념으로 접근한 것입니다.
 
