@@ -1,11 +1,12 @@
 # pyenv 사용에 관하여 / 설정법
 
-문제점 : [https://medium.com/@chullino/sudo-절대-쓰지-마세요-8544aa3fb0e7](https://medium.com/@chullino/sudo-%EC%A0%88%EB%8C%80-%EC%93%B0%EC%A7%80-%EB%A7%88%EC%84%B8%EC%9A%94-8544aa3fb0e7)
+문제점 : [sudo 쓰지마세요 블로그 글](https://medium.com/@chullino/sudo-%EC%A0%88%EB%8C%80-%EC%93%B0%EC%A7%80-%EB%A7%88%EC%84%B8%EC%9A%94-8544aa3fb0e7)
 
 일단 저의 경우 `sudo easy_install pip` 를 하고 에러가 왕창 떴습니다..ㅠㅠ 
 이 권한을 수정하기 위해서는 `sudo pip3 ~ --user ~` 을 써야했습니다. sudo를 직접적으로 써도 되겠지만, 추가적으로 vsc에서 파이썬을 확장할때도 또 파이썬이 깔리는 등 관리가 어렵고, 맥북의 기본 설치된 파이썬을 사용하지 말라는 조언을 봤던 기억이 있어서 pyenv 로 구축하기로 했습니다. 
 
-([https://opensource.com/article/19/5/python-3-default-mac](https://opensource.com/article/19/5/python-3-default-mac))
+([맥 내장 파이썬을 사용하는 글에 관하여](https://opensource.com/article/19/5/python-3-default-mac))
+pyenv 사용 참고 블로그 : [pyenv 사용참고 블로그 글](https://jiyeonseo.github.io/2016/07/27/install-pyenv/)
 
 파이썬 가상환경 만드는 방법은 크게 4가지 방법이 있습니다.
 
@@ -23,9 +24,8 @@
 - **pyenv**
     - pyenv-virtualenv 라는 것을 별도로 깔아주어야 하지만 버전별로 세세하게 구현 가능하다고 합니다
     - 최근 가장 많이 추천되고 있는 가상환경
-
-pyenv 사용 참고 블로그 : [https://jiyeonseo.github.io/2016/07/27/install-pyenv/](https://jiyeonseo.github.io/2016/07/27/install-pyenv/)
-
+  
+<br>
 그래서 pyenv로 가상환경을 설정해보았습니다
 <br><br>
 
@@ -87,10 +87,8 @@ pyenv virtualenv 3.8.2 {datepopserver}
 pyenv virtualenvs
 ```
 
-원하는 이름으로 만들어주면 됩니다.
-
-이후 각 프로젝트별로 가상환경을 자동으로 설정되게 해주고 싶다면, 아래를 참고해주자.
-
+원하는 이름으로 만들어주면 됩니다.  
+이후 각 프로젝트별로 가상환경을 자동으로 설정되게 해주고 싶다면, 아래를 참고해주자.  
 로컬로 실행되게 설정해놓으면 따로 활성화를 해줄필요없이, 해당 git clone 받은 파일에 들어가면 자동으로 가상환경도 실행되게 된다.  
 아래와 같이 설정하면 편하다.
 <br><br>
@@ -105,18 +103,19 @@ pyenv local 가상환경서버명
 pyenv activate {가상환경이름}  ##활성화
 pyenv deactivate {가상환경이름} ##비활성화
 ```
-
-<aside>
+<br><br>
 💡 activate중 오류뜨는 경우
 
 `~/.zshrc` 파일에 환경변수 제대로 설정되었는지 확인하고 ,
 `source ~/.zshrc` 적용해서 다시 실행해볼것
 만약 이래도 안된다면, path 잡는중 꼬인거라 zsh 설정을 초기화한후 다시 실행해주면 된다
-`$ exec /usr/bin/zsh`
+`$ exec /usr/bin/zsh`  
 
-이래도 안된다면 echo 를 이용해서 한번 더 설정한다
+
+이래도 안된다면 echo 를 이용해서 한번 더 설정한다  
 `echo 'eval "$(pyenv init —path)"' >> ~/.zshrc
  echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.zshrc
  source ~/.zshrc`
 
-</aside>
+
+
