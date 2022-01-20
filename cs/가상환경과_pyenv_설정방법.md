@@ -5,7 +5,7 @@
 일단 저의 경우 `sudo easy_install pip` 를 하고 에러가 왕창 떴습니다..ㅠㅠ 
 이 권한을 수정하기 위해서는 `sudo pip3 ~ --user ~` 을 써야했습니다. sudo를 직접적으로 써도 되겠지만, 추가적으로 vsc에서 파이썬을 확장할때도 또 파이썬이 깔리는 등 관리가 어렵고, 맥북의 기본 설치된 파이썬을 사용하지 말라는 조언을 봤던 기억이 있어서 pyenv 로 구축하기로 했습니다. 
 
-([맥 내장 파이썬을 사용하는 글에 관하여](https://opensource.com/article/19/5/python-3-default-mac))
+[맥 내장 파이썬을 사용하는 글에 관하여](https://opensource.com/article/19/5/python-3-default-mac)  
 pyenv 사용 참고 블로그 : [pyenv 사용참고 블로그 글](https://jiyeonseo.github.io/2016/07/27/install-pyenv/)
 
 파이썬 가상환경 만드는 방법은 크게 4가지 방법이 있습니다.
