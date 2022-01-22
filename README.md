@@ -18,11 +18,11 @@ but I'd like to share it for those who need it.
 ---
 
 🗂  
-↳ 📂 cs 
+↳ 📂 cs  
     📄 GsUtil을 이용한 CLI작업 (GCP에서 AWS로 즉시 파일이전하기)  
     📄 Pyenv 및 가상환경설정 (파이썬)  
 ↳ 📂 frontend  
-    📄 Atomic design (디자인패턴)
+    📄 Atomic design (디자인패턴)  
 ↳ 📂 backend  
 ↳ 📂 ...
 
