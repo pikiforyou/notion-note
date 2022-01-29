@@ -17,7 +17,8 @@ but I'd like to share it for those who need it.
 
 ---
 
-  
+
+- INDEX
 📂 cs  
  ↳ 📄 GsUtil을 이용한 CLI작업 (GCP에서 AWS로 즉시 파일이전하기)  
  ↳ 📄 Pyenv 및 가상환경설정 (파이썬)  
