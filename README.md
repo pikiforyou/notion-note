@@ -18,7 +18,7 @@ but I'd like to share it for those who need it.
 ---
 
 
-- INDEX  
+🗒INDEX  
 
 📂 cs  
  ↳ 📄 GsUtil을 이용한 CLI작업 (GCP에서 AWS로 즉시 파일이전하기)  
