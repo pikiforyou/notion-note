@@ -1,10 +1,10 @@
 # 흐름도
 
 <aside>
-⚒️  **Model   →   Viewset   →   query**   
-       [middleware]      [only]
+⚒️  Model   →   Viewset   →   query     
+       [middleware]      [only]  
  
-  **→   serializer   →   Viewset   →   Response**
+ →   serializer   →   Viewset   →   Response  
  [values]
 
 </aside>
