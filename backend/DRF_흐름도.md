@@ -1,13 +1,13 @@
 # 흐름도
 
 <aside>
-⚒️  Model   →   Viewset   →   query     
-       [middleware]      [only]  
- 
+⚒️  Model   →   Viewset   →   query       
  →   serializer   →   Viewset   →   Response  
- [values]
-
 </aside>
+
+즉,
+Model => [middleware] => Viewset => [only] => query => [values] => serializer => viewset => response이다.  
+
 
 1. **Model (DB)이 존재한다**
     
